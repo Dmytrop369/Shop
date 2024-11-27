@@ -1,0 +1,40 @@
+.moderators__list {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.moderators__list thead {
+    font-size: 14px;
+}
+
+.moderators__list tbody {
+    font-size: 18px;
+}
+
+.moderators__list thead td {
+    padding-bottom: 15px;
+}
+
+.moderators__list tbody tr {
+    background: black;
+}
+
+.moderators__list tbody td {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.moderators__list button:nth-child(1) {
+    background: orange;
+    width: 80px;
+    height: 32px;
+    border-radius: 15px;
+}
+
+.moderators__list button:nth-child(2) {
+    background: rgb(240, 39, 39);
+    width: 80px;
+    height: 32px;
+    border-radius: 15px;
+}

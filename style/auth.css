@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth {
+    max-width: 320px;
+    width: 100%;
+}
+
+.auth form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth h1 {
+    margin-bottom: 20px;
+}
+
+.auth p {
+    color: red;
+    text-align: center;
+    margin: 5px 0;
+    display: none;
+}
+
+.auth p.active {
+    display: block;
+}

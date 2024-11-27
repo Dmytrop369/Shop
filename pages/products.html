@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Page</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/products.css">
+</head>
+
+<body>
+	<div class="root">
+		<div class="sidebar">
+			<span>Admin Panel</span>
+			<nav>
+				<a href="./dashboard.html">dashboard</a>
+				<a href="./products.html" class="active">product</a>
+				<a href="./orders.html">orders</a>
+				<a href="./clients.html">clients</a>
+				<a href="./comments.html">comments</a>
+				<a href="./moderators.html">moderators</a>
+			</nav>
+			<button> log </button>
+		</div>
+
+		<main>
+			<div class="product__page-top">
+
+				<h1>Product Page</h1>
+				
+				<button class="new__product">+ New Product</button>
+			</div>
+
+			<div class="product__list">
+
+			</div>
+		</main>
+	</div>
+
+	<div class="modal">
+
+		<div class="modal__window">
+
+			<div class="modal__content">
+
+				<h2>fdfcfcvvcf</h2>
+
+				<div class="modal__content-box">
+
+					<div class="modal__image-preview">
+						<img src="" alt="">
+					</div>
+
+					<form>
+						<div class="form__wrapper">
+							<div class="custom-field">
+								<label for="inp-price">Title</label>
+								<input type="text" id="inp-price" value="iPhone 14 Pro Max">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-price">price</label>
+								<input type="text" id="inp-price" value="1200">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-discount">discount</label>
+								<input type="text" id="inp-discount" value="10">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-info">info</label>
+								<input type="text" id="inp-info" value="128GB, Space Gray">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-category">category</label>
+								<input type="text" id="inp-category" value="Phone">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-producer">producer</label>
+								<input type="text" id="inp-producer" value="Apple">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-createAt">createAt</label>
+								<input type="text" id="inp-createAt" value="2024-10-14">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-image-1">Image 1</label>
+								<input type="text" id="inp-image-1" value="167397805.webp">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-image-2">Image 2</label>
+								<input type="text" id="inp-image-2" value="468129229.webp">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-image-3">Image 3</label>
+								<input type="text" id="inp-image-3" value="167397805.webp">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-image-4">Image 4</label>
+								<input type="text" id="inp-image-4" value="468129229.webp">
+							</div>
+						</div>
+
+						<button class="btn">Save product</button>
+					</form>
+
+				</div>
+			</div>
+
+			<button class="btn-modal-close">
+				&#10006;
+			</button>
+		</div>
+	</div>
+
+	<div class="big__loader">
+		Загруження...
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+	<script type="module" src="../script/products.js"></script>
+
+</body>
+
+</html>

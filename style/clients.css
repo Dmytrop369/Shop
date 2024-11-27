@@ -1,0 +1,33 @@
+.clients__list {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.clients__list thead {
+    font-size: 14px;
+}
+
+.clients__list tbody {
+    font-size: 18px;
+}
+
+.clients__list thead td {
+    padding-bottom: 15px;
+}
+
+.clients__list tbody tr {
+    background: black;
+}
+
+.clients__list tbody td {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.clients__list button {
+    background: rgb(240, 39, 39);
+    width: 80px;
+    height: 32px;
+    border-radius: 15px;
+}

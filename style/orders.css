@@ -1,0 +1,33 @@
+.orders__list {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.orders__list thead {
+    font-size: 14px;
+}
+
+.orders__list tbody {
+    font-size: 18px;
+}
+
+.orders__list thead td {
+    padding-bottom: 15px;
+}
+
+.orders__list tbody tr {
+    background: black;
+}
+
+.orders__list tbody td {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.orders__list button {
+    background: rgb(240, 39, 39);
+    width: 80px;
+    height: 32px;
+    border-radius: 15px;
+}

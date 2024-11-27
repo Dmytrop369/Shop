@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Orders Pag</title>
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/orders.css">
+</head>
+
+<body>
+	<div class="root">
+		<div class="sidebar">
+			<span>Admin Panel</span>
+			<nav>
+				<a href="./dashboard.html">dashboard</a>
+				<a href="./products.html">product</a>
+				<a href="./orders.html" class="active">orders</a>
+				<a href="./clients.html">clients</a>
+				<a href="./comments.html">comments</a>
+				<a href="./moderators.html">moderators</a>
+			</nav>
+			<button> log </button>
+		</div>
+
+
+		<main>
+			<h1>Orders Pag</h1>
+			<table class="orders__list">
+				<thead>
+					<tr>
+						<td>Номер клієнта</td>
+						<td>Продукт</td>
+						<td>Сума замовлення</td>
+						<td>адрес доставки</td>
+						<td></td>
+						<td>Дата створення</td>
+						<td>Статус замовлення</td>
+						<td>ім’ я отримувача</td>
+						<td>прізвище отримувача</td>
+						<td>дата створення</td>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</main>
+
+	</div>
+
+
+	<div class="big__loader">
+		Загруження...
+	</div>
+	<script type="module" src="../script/orders.js"></script>
+</body>
+
+</html>

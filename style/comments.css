@@ -1,0 +1,33 @@
+.comments__list {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.comments__list thead {
+    font-size: 14px;
+}
+
+.comments__list tbody {
+    font-size: 18px;
+}
+
+.comments__list thead td {
+    padding-bottom: 15px;
+}
+
+.comments__list tbody tr {
+    background: black;
+}
+
+.comments__list tbody td {
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.comments__list button {
+    background: rgb(240, 39, 39);
+    width: 80px;
+    height: 32px;
+    border-radius: 15px;
+}
