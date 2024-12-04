@@ -1,5 +1,5 @@
 import { verifyUser } from "../service/verify.js"
-import { changeDate, getDate } from "../service/service.js"
+import { changeDate, deleteDate, getDate, addNewData } from "../service/service.js"
 import initModal from "./modal.js"
 
 let productlist = document.querySelector(".product__list")
@@ -12,7 +12,7 @@ getDate("p", "products").then(productArray => renderProducts(productArray))
 function renderProducts(productArray) {
 	productlist.innerHTML = ""
 
-	productArray.forEach(element => {
+	productArray.reverse().forEach(element => {
 		productlist.innerHTML += `		
             <div class="product__item">
 					<div class="swiper mySwiper">
@@ -55,7 +55,7 @@ function renderProducts(productArray) {
 
 						<div class="products__item-btns">
 							<button id="open-modal" class="edit-btn" data-id="${element.id}">Edit</button>
-							<button>Delete</button>
+							<button class="delete-btn" data-id="${element.id}">Delete</button>
 						</div>
 					</div>
 				</div>`
@@ -69,16 +69,28 @@ function renderProducts(productArray) {
 		},
 	});
 
-	productlist.addEventListener("click", (event) => {
-		if (event.target.closest(".edit-btn")) {
-
-			getDate("p", `products/${event.target.dataset.id}`)
-				.then(data => renderModal(data))
-		}
-	})
-
-	
 }
+productlist.addEventListener("click", (event) => {
+	if (event.target.closest(".edit-btn")) {
+
+		getDate("p", `products/${event.target.dataset.id}`)
+			.then(data => renderModal(data))
+	}
+	if (event.target.closest(".delete-btn")) {
+
+		let wantToDelete = confirm("This product was be deleted")
+
+		if (wantToDelete) {
+			deleteDate("p", `products/${event.target.dataset.id}`)
+				.then(data => {
+					if (data) {
+						location.reload()
+					}
+				})
+		}
+	}
+})
+
 function renderModal(producer) {
 	modalContentBox.innerHTML = ""
 
@@ -87,13 +99,13 @@ function renderModal(producer) {
 	let tempImgs = ""
 
 	for (let i = 0; i < 4; i++) {
-		if(producer && producer.imgs[i]) {
-		tempImgs+=`<div class="custom-field">
+		if (producer && producer.imgs[i]) {
+			tempImgs += `<div class="custom-field">
 				<label for="inp-image-${i + 1}">Image${i + 1}</label>
 				<input type="text" id="inp-image-${i + 1}" value="${producer.imgs[i]}">
 			</div>`
 		} else {
-			tempImgs+=`<div class="custom-field">
+			tempImgs += `<div class="custom-field">
 						<label for="inp-image-${i + 1}">Image${i + 1}</label>
 						<input type="text" id="inp-image-${i + 1}" value="">
 					  </div>`
@@ -166,7 +178,7 @@ modalContentBox.addEventListener("click", (e) => {
 		let inpCategory = document.querySelector("#inp-category")
 		let inpProducer = document.querySelector("#inp-producer")
 		let inpCreateAt = document.querySelector("#inp-createAt")
-	
+
 		let inpImage1 = document.querySelector("#inp-image-1")
 		let inpImage2 = document.querySelector("#inp-image-2")
 		let inpImage3 = document.querySelector("#inp-image-3")
@@ -175,7 +187,6 @@ modalContentBox.addEventListener("click", (e) => {
 		if (!inpTitle.value || !inpPrice.value || !inpDisc.value || !inpInfo.value || !inpCategory.value || !inpProducer.value || !inpCreateAt.value || !inpImage1.value) {
 			return alert("Error")
 		}
-		if (!prodId || prodId === "null") return
 
 		let newImages = []
 		let inpImages = [inpImage1?.value, inpImage2?.value, inpImage3?.value, inpImage4?.value]
@@ -187,26 +198,33 @@ modalContentBox.addEventListener("click", (e) => {
 		})
 
 		let newData = {
-			id: prodId,
 			imgs: newImages,
 			name: inpTitle.value,
 			price: +inpPrice.value,
 			discount: +inpDisc.value,
 			info: inpInfo.value,
 			category: inpCategory.value,
-			producerr: inpProducer.value,
-			cresteAt: inpCreateAt.value
+			producer: inpProducer.value,
+			createAt: inpCreateAt.value
 		}
-		changeDate("p", `products/${prodId}`, newData).then(date => {
-			if (date) {
-				window.location.reload()
-			}
-		})
+		if (!prodId || prodId === "null") {
+			addNewData("p", "products", newData).then(data => {
+				if (data) {
+					window.location.reload()
+				}
+			})
+		} else {
+			changeDate("p", `products/${prodId}`, newData).then(date => {
+				if (date) {
+					window.location.reload()
+				}
+			})
+		}
 	}
 })
 
 NewProduct.addEventListener("click", () => {
-		renderModal()
-	})
+	renderModal()
+})
 
 verifyUser()

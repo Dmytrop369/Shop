@@ -125,3 +125,9 @@
 h1 {
 	margin-bottom: 0;
 }
+
+@media all and (max-width: 1300px) {
+	.product__item{
+		width: 100%;
+	}
+}

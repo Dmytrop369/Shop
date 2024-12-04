@@ -18,6 +18,26 @@ async function changeDate(mockApi, route, newData) {
     return date
 }
 
+async function  addNewData(mockApi, route, newData) {
+    let url = generateUrl(mockApi)
+    let res = await fetch(url + route, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(newData)
+    })
+    let date = await res.json()
+    return date
+}
+
+async function  deleteDate(mockApi, route) {
+    let url = generateUrl(mockApi)
+    let res = await fetch(url + route, {
+        method: 'DELETE'
+    })
+    let date = await res.json()
+    return date
+}
+
 function generateUrl(mockApi) { 
     let url
     if (mockApi === "p") {
@@ -31,4 +51,4 @@ function generateUrl(mockApi) {
     }
     return url
 }
-export { getDate, changeDate }
+export { getDate, changeDate, addNewData, deleteDate}

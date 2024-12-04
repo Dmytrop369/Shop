@@ -1,5 +1,5 @@
 import { verifyUser } from "../service/verify.js"
-import { getDate } from "../service/service.js"
+import { getDate, deleteDate } from "../service/service.js"
 
 let clientslist = document.querySelector(".clients__list tbody")
 
@@ -20,10 +20,27 @@ function renderModeratos(clientsArray) {
 						<td>${element.address}</td>
 						<td>${element.createAt}</td>
                         	<td>
-							<button>delete</button>
+							<button class="delete-btn" data-id=${element.id}>delete</button>
 						</td>
 					</tr>`
     })
 }
+
+clientslist.addEventListener("click", (event) => {
+
+	if (event.target.closest(".delete-btn")) {
+
+		let wantToDelete = confirm("This product was be deleted")
+
+		if (wantToDelete) {
+			deleteDate("c", `clients/${event.target.dataset.id}`)
+				.then(data => {
+					if (data) {
+						location.reload()
+					}
+				})
+		}
+	}
+})
 
 verifyUser()

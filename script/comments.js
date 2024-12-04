@@ -1,5 +1,5 @@
 import { verifyUser } from "../service/verify.js"
-import { getDate } from "../service/service.js"
+import { getDate, deleteDate } from "../service/service.js"
 
 let commentslist = document.querySelector(".comments__list tbody")
 
@@ -18,10 +18,27 @@ function renderModeratos(commentsArray) {
 						<td>${element.rate}</td>
 						<td>${element.createAt}</td>
                         	<td>
-							<button>delete</button>
+							<button class="delete-btn" data-id=${element.id} data-prodid=${element.productId}>delete</button>
 						</td>
 					</tr>`
     })
 }
+
+commentslist.addEventListener("click", (event) => {
+
+	if (event.target.closest(".delete-btn")) {
+
+		let wantToDelete = confirm("This product was be deleted")
+
+		if (wantToDelete) {
+			deleteDate("p", `products/${event.target.dataset.prodid}/comments/${event.target.dataset.id}`)
+				.then(data => {
+					if (data) {
+					location.reload()
+					}
+				})
+		}
+	}
+})
 
 verifyUser()
