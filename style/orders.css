@@ -16,8 +16,26 @@
     padding-bottom: 15px;
 }
 
+
 .orders__list tbody tr {
     background: black;
+}
+
+.orders__list thead tr.waiting {
+    background: rgb(155, 153, 5);
+}
+
+
+.orders__list thead tr.send {
+    background: rgb(30, 4, 146);
+}
+
+.orders__list thead tr.accept {
+    background: rgb(5, 179, 14);
+}
+
+.orders__list thead tr.failed {
+    background: rgb(156, 7, 7);
 }
 
 .orders__list tbody td {
@@ -30,4 +48,10 @@
     width: 80px;
     height: 32px;
     border-radius: 15px;
+}
+
+select {
+    background: rgb(170, 193, 19);
+    border-radius: 20px;
+    height: 32px;
 }

@@ -1,18 +1,21 @@
 import { verifyUser } from "../service/verify.js"
 import { getDate, deleteDate } from "../service/service.js"
+import logout from "./logout.js"
+
+logout()
 
 let clientslist = document.querySelector(".clients__list tbody")
 
 getDate("c", "clients").then(clientsArray => renderModeratos(clientsArray))
 
 function renderModeratos(clientsArray) {
-    clientslist.innerHTML = "" 
+	clientslist.innerHTML = ""
 
-    clientsArray.forEach(element => {
-        console.log(element)
-        clientslist.innerHTML +=`
+	clientsArray.forEach(element => {
+		console.log(element)
+		clientslist.innerHTML += `
 					<tr>
-						<td>${element.name+" "+element.lastname}</td>
+						<td>${element.name + " " + element.lastname}</td>
 						<td>${element.phone}</td>
 						<td>${element.email}</td>
 						<td>${element.login}</td>
@@ -23,7 +26,7 @@ function renderModeratos(clientsArray) {
 							<button class="delete-btn" data-id=${element.id}>delete</button>
 						</td>
 					</tr>`
-    })
+	})
 }
 
 clientslist.addEventListener("click", (event) => {

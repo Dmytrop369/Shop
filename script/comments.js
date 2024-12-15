@@ -1,16 +1,18 @@
 import { verifyUser } from "../service/verify.js"
 import { getDate, deleteDate } from "../service/service.js"
+import logout from "./logout.js"
 
+logout()
 let commentslist = document.querySelector(".comments__list tbody")
 
 getDate("p", "comments").then(commentsArray => renderModeratos(commentsArray))
 
 function renderModeratos(commentsArray) {
-    commentslist.innerHTML = "" 
+	commentslist.innerHTML = ""
 
-    commentsArray.forEach(element => {
-        console.log(element)
-        commentslist.innerHTML +=`
+	commentsArray.forEach(element => {
+		console.log(element)
+		commentslist.innerHTML += `
 					<tr>
                         <td>${element.productId}</td>
                         <td>${element.author}</td>
@@ -21,7 +23,7 @@ function renderModeratos(commentsArray) {
 							<button class="delete-btn" data-id=${element.id} data-prodid=${element.productId}>delete</button>
 						</td>
 					</tr>`
-    })
+	})
 }
 
 commentslist.addEventListener("click", (event) => {
@@ -34,7 +36,7 @@ commentslist.addEventListener("click", (event) => {
 			deleteDate("p", `products/${event.target.dataset.prodid}/comments/${event.target.dataset.id}`)
 				.then(data => {
 					if (data) {
-					location.reload()
+						location.reload()
 					}
 				})
 		}

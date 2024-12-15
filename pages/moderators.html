@@ -21,12 +21,16 @@
 				<a href="./comments.html">comments</a>
 				<a href="./moderators.html" class="active">moderators</a>
 			</nav>
-			<button> log </button>
+			<button class="logout-btn"> log </button>
 		</div>
 
 
 		<main>
-			<h1>Moderators Pag</h1>
+			<div class="moderators__page-top">
+				<h1>Moderators Page</h1>
+				<button class="new__moder" id="open-modal">+ New Moder</button>
+			</div>
+
 			<table class="moderators__list">
 				<thead>
 					<tr>
@@ -41,11 +45,70 @@
 					</tr>
 				</thead>
 				<tbody>
-			
+
 				</tbody>
 			</table>
 		</main>
+	</div>
+	<div class="modal">
 
+		<div class="modal__window">
+
+			<div class="modal__content">
+
+				<h2>Product Page</h2>
+
+				<div class="modal__content-box">
+
+					<form>
+						<div class="form__wrapper">
+							<div class="custom-field">
+								<label for="inp-name">Name</label>
+								<input type="text" id="inp-name">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-lastname">lastname</label>
+								<input type="text" id="inp-lastname">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-role">role</label>
+								<input type="text" id="inp-role">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-phone">phone</label>
+								<input type="text" id="inp-phone">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-email">email</label>
+								<input type="text" id="inp-email">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-login">login</label>
+								<input type="text" id="inp-login">
+							</div>
+
+							<div class="custom-field">
+								<label for="inp-password">password</label>
+								<input type="text" id="inp-password">
+							</div>
+
+						</div>
+
+						<button id="send-form" class="btn">Save admin</button>
+					</form>
+
+				</div>
+			</div>
+
+			<button class="btn-modal-close">
+				&#10006;
+			</button>
+		</div>
 	</div>
 	<div class="big__loader">
 		Загруження...

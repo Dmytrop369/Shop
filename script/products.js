@@ -1,7 +1,9 @@
 import { verifyUser } from "../service/verify.js"
 import { changeDate, deleteDate, getDate, addNewData } from "../service/service.js"
 import initModal from "./modal.js"
+import logout from "./logout.js"
 
+logout()
 let productlist = document.querySelector(".product__list")
 let modalContentBox = document.querySelector(".modal__content-box")
 let NewProduct = document.querySelector(".new__product")

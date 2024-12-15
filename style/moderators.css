@@ -1,40 +1,98 @@
 .moderators__list {
-    color: white;
-    text-align: center;
-    width: 100%;
+	color: white;
+	text-align: center;
+	width: 100%;
 }
 
 .moderators__list thead {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .moderators__list tbody {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .moderators__list thead td {
-    padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
 .moderators__list tbody tr {
-    background: black;
+	background: black;
 }
 
 .moderators__list tbody td {
-    padding: 10px 15px;
-    border-radius: 10px;
+	padding: 10px 15px;
+	border-radius: 10px;
 }
 
 .moderators__list button:nth-child(1) {
-    background: orange;
-    width: 80px;
-    height: 32px;
-    border-radius: 15px;
+	background: orange;
+	width: 80px;
+	height: 32px;
+	border-radius: 15px;
 }
 
 .moderators__list button:nth-child(2) {
-    background: rgb(240, 39, 39);
-    width: 80px;
-    height: 32px;
-    border-radius: 15px;
+	background: rgb(240, 39, 39);
+	width: 80px;
+	height: 32px;
+	border-radius: 15px;
+}
+
+.modal form .form__wrapper {
+	display: flex;
+	gap: 10px;
+	margin-top: 20px;
+	width: 530px;
+	flex-wrap: wrap;
+}
+
+.modal form label {
+	display: block;
+	color: white;
+}
+
+.modal .btn {
+	width: 260px;
+	margin-top: 20px;
+}
+
+.modal__content-box {
+	display: flex;
+	gap: 60px;
+}
+
+.modal form input {
+	display: block;
+	height: 36px;
+	font-size: 16px;
+	width: 260px;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+
+.modal__image-preview {
+	display: flex;
+	margin-top: 20px;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.modal__image-preview img {
+	width: 200px;
+	height: 260px;
+	object-fit: contain;
+	background: white;
+}
+
+.moderators__page-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.moderators__page-top button {
+	padding: 5px 15px;
+	border-radius: 10px;
+	cursor: pointer;
 }

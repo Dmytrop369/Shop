@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Doshboard Page</title>
 	<link rel="stylesheet" href="../style/style.css">
-	<link rel="stylesheet" href="../style/clients.css">
+	<link rel="stylesheet" href="../style/dashboard.css">
 </head>
 
 <body>
@@ -21,19 +21,39 @@
 				<a href="./comments.html">comments</a>
 				<a href="./moderators.html">moderators</a>
 			</nav>
-			<button> log </button>
+			<button class="logout-btn"> log </button>
 		</div>
 
-
 		<main>
-			<h1>Orders Pag</h1>
+			<h1>Dashboard</h1>
+
+			<div class="dashboard-box">
+				<div class="dashboard-box__products">
+					<span></span>
+					<h3>Products</h3>
+				</div>
+				<div class="dashboard-box__clients">
+					<span></span>
+					<h3>Clients</h3>
+				</div>
+				<div class="dashboard-box__orders">
+					<span></span>
+					<h3>Orders</h3>
+				</div>
+				<div class="dashboard-box__comments">
+					<span></span>
+					<h3>Comments</h3>
+				</div>
+			</div>
+
 		</main>
 
 	</div>
 	<div class="big__loader">
 		Загруження...
 	</div>
-	<script type="module" src="../script/clients.js"></script>
+
+	<script type="module" src="../script/dashboard.js"></script>
 </body>
 
 </html>
