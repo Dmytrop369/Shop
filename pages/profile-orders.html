@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/header.css">
+	<link rel="stylesheet" href="../style/profile.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="header__wrapper row">
+				<div class="logo row">
+					<a href="../index.html"><img src="../imgs/SVG/Logo.svg" alt=""></a>
+				</div>
+				<div class="header__navigation row">
+					<form class="header__form">
+						<input type="text" required placeholder="search...">
+						<button class="search-btn">
+							<img src="../imgs/SVG/search.svg" alt="search">
+						</button>
+					</form>
+					<nav class="row">
+						<a href="../pages/catalog.html">Каталог</a>
+						<a href="">Профіль</a>
+					</nav>
+				</div>
+				<div class="header__burger">
+					<figure></figure>
+					<figure></figure>
+					<figure></figure>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="profile">
+			<div class="container">
+				<div class="profile__wrapper">
+					<div class="profile__navgin">
+						<a href="./profile.html" class="profile-btn">Профіль</a>
+						<a href="./profile-orders.html" class="order-btn">Замовлення</a>
+						<button class="logout-btn">Logout</button>
+					</div>
+					<div class="profile__orders">
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h3>Future Tech</h3>
+				<table>
+					<tr>
+						<td><a href="#">Головна</a></td>
+						<td><a href="#">Категорії</a></td>
+					</tr>
+					<ul>
+						<td><a href="#">Про нас</a></td>
+						<td><a href="#">Контакти</a></td>
+					</ul>
+				</table>
+				<div class="social-icons">
+					<a href="#"><img src="../imgs/SVG/instagram-1-svgrepo-com (1).svg" alt="Instagram"></a>
+					<a href="#"><img src="../imgs/SVG/telegram-svgrepo-com.svg" alt="Telegram"></a>
+					<a href="#"><img src="../imgs/SVG/tyktok.svg" alt=""></a>
+				</div>
+			</div>
+			<div class="footer-section">
+
+			</div>
+		</div>
+	</footer>
+	<script src="../service/search.js" type="module"></script>
+	<script src="../script/profile-orders.js" type="module"></script>
+</body>
+
+</html>

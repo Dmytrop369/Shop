@@ -1,0 +1,16 @@
+.all-products {
+    padding: 60px 0;
+}
+
+.all-products__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.all-products h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}

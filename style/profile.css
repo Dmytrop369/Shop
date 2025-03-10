@@ -1,0 +1,73 @@
+.profile__wrapper {
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+	background: gainsboro;
+	padding: 15px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.profile__wrapper .logout-btn {
+	background: red;
+	color: white;
+	font-weight: 700;
+	padding: 8px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: none;
+}
+
+.profile__navgin {
+	margin-bottom: 10px;
+}
+
+.profile__user p {
+	margin: 8px 0;
+}
+
+.profile__user h2 {
+	margin-bottom: 10px;
+}
+
+.profile__orders {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.profile__order {
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.profile__order-prods {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.profile__order-prod {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	border-bottom: 1px solid black;
+	padding: 6px 0;
+}
+
+.profile__order-prod h3 {
+	width: 150px;
+	font-size: 14px;
+	font-weight: 400;
+	margin-right: auto;
+	text-align: left;
+}
+
+.profile__order img {
+	width: 40px;
+	height: 40px;
+	object-fit: contain;
+	background: white;
+}

@@ -2,86 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/in.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel="stylesheet" href="./style/header.css">
+	<link rel="stylesheet" href="./style/home.css">
+	<link rel="stylesheet" href="./style/product.css">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="header__wrapper row">
-                <div class="logo">
-                    <a href="./index.html"><img src="./imgs/SVG/Logo.svg" alt=""></a>
-                    <input type="text">
-                </div>
-                <div class="header__navigation row">
-                    <nav class="row">
-                        <a href="./pages/catalog.html">Каталог</a>
-                        <a href="">Профіль</a>
-                        <a href="./pages/cart.html"><img src="./imgs/SVG/Frame 1.svg" alt=""></a>
-                    </nav>
-                </div>
-                <div class="header__burger">
-                    <figure></figure>
-                    <figure></figure>
-                    <figure></figure>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="hero__her">
-                <img src="./imgs/p/hero.png" alt="">
-            </div>
-        </section>
-        <section class="hits">
-            <div class="container">
-                <div class="product__list">
-                    <div class="product__item">
-                        <h2>Хіти продажу</h2>
-                        <div class="product-card">
-                            <div class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="./imgs/p/19101994.webp" alt="Iphone 14 pro max">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./imgs/p/167397805.webp" alt="Iphone 14 pro max">
-                                    </div>
+	<header>
+		<div class="container">
+			<div class="header__wrapper row">
+				<div class="logo row">
+					<a href="./index.html"><img src="./imgs/SVG/Logo.svg" alt=""></a>
+				</div>
+				<div class="header__navigation row">
+					<form class="header__form">
+						<input type="text" required placeholder="search...">
+						<button class="search-btn">
+							<img src="./imgs/SVG/search.svg" alt="search">
+						</button>
+					</form>
+					<nav class="row">
+						<a href="./pages/catalog.html">Каталог</a>
+						<a href="./pages/profile.html">Профіль</a>
+						<a id="open-cart"><img src="./imgs/SVG/Frame 1.svg" alt=""></a>
+					</nav>
+				</div>
+				<div class="header__burger">
+					<figure></figure>
+					<figure></figure>
+					<figure></figure>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="hero">
 
-                                </div>
-                                <div class="swiper-pagination"></div>
-                            </div>
-                            <div class="details">
-                                <h3>Iphone 14 pro max 64 gb<br>Space gray</h3>
-                                <div class="rating">
+			<div class="hero__wrapper">
 
-                                    <table>
-                                       <td><span>★★★★★</span></td> 
-                                        <td><span class="reviews"><img class="com" src="./imgs/p/com.png" alt="">21</span></td>
+				<div class="swiper hero-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="./imgs/p/hero.png" alt=""></div>
+						<div class="swiper-slide"><img src="./imgs/p/hero1.webp" alt=""></div>
+						<div class="swiper-slide"><img src="./imgs/p/hero2.webp" alt=""></div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
 
-                                </div>
-                                <tr>
 
-                                    <td>
-                                        <div class="price">14 599 ₴</div>
-                                    </td>
-                                    <td><button>Купити</button></td>
-                                </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="./script/in.js"></script>
+
+		<section class="hits">
+			<div class="container">
+
+				<h2>Хіти продажу</h2>
+				<div class="hits__wrapper">
+
+					<div class="swiper hits-swiper">
+						<div class="swiper-wrapper">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+
+				<a href="./pages/catalog.html" class="tovaru">Переглянути всі товари →</a>
+
+			</div>
+		</section>
+
+		</section>
+		<section class="hits">
+			<div class="container">
+
+				<h2>Акційні товари</h2>
+				<div class="hits__wrapper">
+
+					<div class="swiper hits-swiper">
+						<div class="swiper-wrapper">
+
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				<a href="./pages/catalog.html" class="tovaru">Переглянути всі товари →</a>
+			</div>
+		</section>
+
+
+		<section class="we">
+			<div id="#we" class="container">
+				<h2>Про нас</h2>
+				<div class="we__text">
+					<p>Ласкаво просимо до нашого магазину електроніки! Ми пропонуємо широкий асортимент сучасних
+						гаджетів, техніки та аксесуарів за вигідними цінами. У нас ви знайдете продукцію від провідних
+						світових брендів з офіційною гарантією. Наша команда експертів допоможе вам обрати ідеальний
+						товар відповідно до ваших потреб. Ми стежимо за новинками та постійно оновлюємо асортимент, щоб
+						ви завжди мали доступ до найкращих технологій. Швидка доставка, зручні способи оплати та якісний
+						сервіс – наші головні пріоритети. Ми прагнемо зробити ваші покупки комфортними та приємними.
+						Дякуємо, що довіряєте нам свою електроніку!</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<div class="cart">
+		<div class="cart__wrapper">
+			<div class="cart__top">
+				<button id="close-cart">✕</button>
+				<h2>Кошик</h2>
+			</div>
+			<div class="cart__list">
+
+			</div>
+			<div class="cart__bottom">
+				<p>Загальна сума: <span>0 грн</span></p>
+				<button>Оформити покупку</button>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h3>Future Tech</h3>
+
+
+				<a href="/index.html">Головна</a></td>
+				<a href="/pages/catalog.html">Категорії</a></td>
+
+				<a href="/index.html #we">Про нас</a></td>
+				<a href="#">Контакти</a>
+
+
+				<div class="social-icons">
+					<a href="#"><img src="../imgs/SVG/instagram-1-svgrepo-com (1).svg" alt="Instagram"></a>
+					<a href="#"><img src="../imgs/SVG/telegram-svgrepo-com.svg" alt="Telegram"></a>
+					<a href="#"><img src="../imgs/SVG/tyktok.svg" alt=""></a>
+				</div>
+			</div>
+			<div class="footer-section">
+
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="./script/home.js" type="module"></script>
+	<script>
+		var swiper = new Swiper(".hero-swiper", {
+			pagination: {
+				el: ".swiper-pagination",
+			},
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: true,
+			},
+		});
+	</script>
+	<script src="../service/search.js" type="module"></script>
+	<script src="../script/cart.js" type="module"></script>
 </body>
 
 </html>

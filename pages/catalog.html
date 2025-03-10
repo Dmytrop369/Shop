@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="../style/header.css">
+	<link rel="stylesheet" href="../style/product.css">
+	<link rel="stylesheet" href="../style/catalog.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<div class="header__wrapper row">
+				<div class="logo row">
+					<a href="../index.html"><img src="../imgs/SVG/Logo.svg" alt=""></a>
+				</div>
+				<div class="header__navigation row">
+					<form class="header__form">
+						<input type="text" required placeholder="search...">
+						<button class="search-btn">
+							<img src="../imgs/SVG/search.svg" alt="search">
+						</button>
+					</form>
+					<nav class="row">
+						<a href="../pages/catalog.html">Каталог</a>
+						<a href="./profile.html">Профіль</a>
+						<a id="open-cart"><img src="../imgs/SVG/Frame 1.svg" alt=""></a>
+					</nav>
+				</div>
+				<div class="header__burger">
+					<figure></figure>
+					<figure></figure>
+					<figure></figure>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="all-products">
+			<div class="container">
+				<h2>Каталог</h2>
+				<div class="all-products__list">
+
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="cart">
+		<div class="cart__wrapper">
+			<div class="cart__top">
+				<button id="close-cart">✕</button>
+				<h2>Кошик</h2>
+			</div>
+			<div class="cart__list">
+
+			</div>
+			<div class="cart__bottom">
+				<p>Загальна сума: <span>0 грн</span></p>
+				<button>Оформити покупку</button>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="footer-container">
+			<div class="footer-section">
+				<h3>Future Tech</h3>
+				<table>
+					<tr>
+						<td><a href="#">Головна</a></td>
+						<td><a href="#">Категорії</a></td>
+					</tr>
+					<ul>
+						<td><a href="#">Про нас</a></td>
+						<td><a href="#">Контакти</a></td>
+					</ul>
+				</table>
+				<div class="social-icons">
+					<a href="#"><img src="../imgs/SVG/instagram-1-svgrepo-com (1).svg" alt="Instagram"></a>
+					<a href="#"><img src="../imgs/SVG/telegram-svgrepo-com.svg" alt="Telegram"></a>
+					<a href="#"><img src="../imgs/SVG/tyktok.svg" alt=""></a>
+				</div>
+			</div>
+			<div class="footer-section">
+
+			</div>
+		</div>
+	</footer>
+
+	<script src="../script/catalog.js" type="module"></script>
+	<script src="../service/search.js" type="module"></script>
+	<script src="../script/cart.js" type="module"></script>
+</body>
+
+</html>
