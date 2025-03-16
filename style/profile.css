@@ -71,3 +71,10 @@
 	object-fit: contain;
 	background: white;
 }
+
+.profile-btn, .order-btn {
+	text-decoration: none;
+	font-weight: 700;
+	color: rgb(12, 12, 12);
+}
+

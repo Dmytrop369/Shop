@@ -1,4 +1,5 @@
 import { getDate } from "../service/service.js";
+import { burgerNav } from "./burger.js";
 
 let profileOrders = document.querySelector(".profile__orders")
 let logoutBtn = document.querySelector(".logout-btn")
@@ -68,3 +69,5 @@ function formatDate(timestamp) {
 	const year = date.getFullYear();
 	return `${day}.${month}.${year}`;
 }
+
+burgerNav()

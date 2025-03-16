@@ -196,3 +196,27 @@
          text-align: center;
      }
  }
+
+ .notify {
+    position: fixed;
+    bottom: 10px;
+    left: -150%;
+    max-width: 380px;
+    width: fit-content;
+    background: greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 9999;
+    transition: all 0.3s;
+  }
+  
+  .notify.show {
+    left: 10px;
+  }
+  
+  @media all and (max-width: 400px) {
+    .notify {
+      width: calc(100% - 20px);
+      text-align: center;
+    }
+  }

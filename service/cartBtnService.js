@@ -1,3 +1,5 @@
+import showNotify from "./notify.js"
+
 function addClickBtnBuy(selector, allProducts, oneProduct = false) {
     selector.addEventListener("click", (event) => {
         if (event.target.closest(".product-card__buy")) {
@@ -24,8 +26,10 @@ function addClickBtnBuy(selector, allProducts, oneProduct = false) {
                         return prod                                 // або пропускаємо далі
                     }
                 })
+                showNotify("Товар уже в корзині")
             } else {
                 cart.push({ ...currProduct, counts: 1})             // якщо нема в корзині то додаємо новий продукт кількість 1
+                showNotify("Товар додано в корзину")
             }
 
             localStorage.setItem("cart", JSON.stringify(cart))      // зберігаємо в локальне сховище продукт

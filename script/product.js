@@ -68,6 +68,28 @@ Promise.all([
             prevEl: ".swier-button-prev",
         },
     });
+        // =======================================
+
+    let exUser = JSON.parse(localStorage.getItem("exClient"))
+
+    if (!exUser) {
+      addCommentBtn.style.display = "none"
+    } else {
+      getDate("c", "clients").then(allClients => {
+        let exClient = allClients.find(client => client.login == exUser.login && client.password == exUser.password)
+  
+        if (!exClient) {
+          addCommentBtn.style.display = "none"
+          localStorage.clear()
+        } else {
+          localStorage.setItem("exClient", JSON.stringify(exClient))
+        }
+      }).catch(() => {
+        addCommentBtn.style.display = "none"
+        localStorage.clear()
+      })
+    }
+    // =======================================
 
     addCommentBtn.addEventListener("click", () => {
         allCommentsForm.classList.add("active")
@@ -83,7 +105,7 @@ Promise.all([
         let newComment = {
             rate: +allCommentsFormSlider.value,
             text: allCommentsTextArea.value,
-            author: allCommentsInpName.value,
+            author: exUser.lastname + "" + exUser.name,
             createAt: Date.now(),
             productId: productId
         }

@@ -1,4 +1,5 @@
 import { getDate } from "../service/service.js";
+import { burgerNav } from "./burger.js";
 
 let profileUser = document.querySelector(".profile__user")
 let logoutBtn =document.querySelector(".logout-btn")
@@ -38,3 +39,5 @@ if (!exUser) {
             localStorage.clear()
         })
 }
+
+burgerNav()
